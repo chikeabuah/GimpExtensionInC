@@ -1,4 +1,6 @@
-//Chike Abuah's sketchy (no pun intended) implementation of a picture framing plug-in for the GIMP, with help from Dave Neary of the GIMP Development team: http://developer.gimp.org/writing-a-plug-in/3/index.html 
+//Chike Abuah's sketchy (no pun intended) implementation of a picture framing plug-in for the GIMP, 
+//with help from Dave Neary of the GIMP Development 
+//team: http://developer.gimp.org/writing-a-plug-in/3/index.html 
 
 //But did you get the pun?
 
@@ -183,7 +185,8 @@ frame (GimpDrawable *drawable, gint image)
   selection = gimp_selection_save (image); 
   gimp_rect_select (image, 
                     vals.offset, vals.offset, 
-                    width - 2*vals.offset, height - 2*vals.offset,  //Sam's more efficient code corrections
+                    width - 2*vals.offset, height - 2*vals.offset,  
+                    //Sam's more efficient code corrections
                     0, TRUE, vals.weather);
   gimp_selection_invert (image);
   gimp_edit_fill (drawable->drawable_id, 0);
